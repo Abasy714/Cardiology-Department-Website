@@ -12,17 +12,20 @@ document.addEventListener("DOMContentLoaded", () => {
  const signInButton = document.querySelector(".submit button");
 
     signInButton.addEventListener("click", () => {
-        const username = document.getElementById("username").value.trim();
-        const password = document.getElementById("password").value.trim();
-        
+        username = document.getElementById("username").value.trim();
+        password = document.getElementById("password").value.trim();
+        const succec = document.querySelector(".successful");
+        const Invalid = document.querySelector(".Invalid");
         if (username === "doctor" && password === "2028") {
-            username = document.getElementById("successful");
-            username.classList.add("successful-msg");
-            alert("Sign in successful!");
+            Invalid.classList.remove("Invalid-msg");
+            succec.classList.add("successful-msg");
+            // alert("Sign in successful!");
             // You can redirect the user if needed:
             // window.location.href = "dashboard.html";
         } else {
-            alert("Invalid username or password.");
+            succec.classList.remove("successful-msg");
+            Invalid.classList.add("Invalid-msg");
+            // alert("Invalid username or password.");
         }
     });
 });

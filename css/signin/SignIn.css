@@ -26,8 +26,12 @@
     padding: 0;
 }
 
-.successful h3, .Invalid h3 {
+.successful, .Invalid {
     display: none;
+}
+
+.successful h3, .Invalid h3 {
+    /* display: none; */
     align-items: center;
     justify-content: center;
     margin: 0 0 0 0;
