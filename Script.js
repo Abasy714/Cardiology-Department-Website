@@ -16,18 +16,18 @@ document.addEventListener("DOMContentLoaded", () => {
         signInButton.addEventListener("click", () => {
             const username = document.getElementById("username").value.trim();
             const password = document.getElementById("password").value.trim();
-            const succec = document.querySelector(".successful");
-            const Invalid = document.querySelector(".Invalid");
-
+            const msg = document.querySelector(".msg");
             if (username === "doctor" && password === "2028") {
-                Invalid.classList.remove("Invalid-msg");
-                succec.classList.add("successful-msg");
+                msg.textContent = "✅ Login successful!";
+                msg.style.color = "green";
 
                 // Optional redirect after login
-                window.location.href = "../../html/Schedule/schedule.html";
+                setTimeout(() => {
+                window.location.href = "../../html/appointments/appointment.html"; // Adjust path as needed
+                }, 1000);
             } else {
-                succec.classList.remove("successful-msg");
-                Invalid.classList.add("Invalid-msg");
+                msg.textContent = "❌ Invalid username or password.";
+                msg.style.color = "red";
             }
         });
     }
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Redirect after 2 seconds
             setTimeout(() => {
                 window.location.href = "../signin/SingIn.html"; // Adjust path as needed
-            }, 2000);
+            }, 1000);
         });
     }
 });

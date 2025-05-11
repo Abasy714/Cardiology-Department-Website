@@ -13,6 +13,7 @@
     <script src="../../Script.js" defer></script>
     <link rel="stylesheet" href="../../css/footer/footer.css">
     <link rel="stylesheet" href="../../css/schedule/schedule.css">
+    <link rel="stylesheet" href="../../css/appointment/appointment.css">
 </head>
 
 <body>
@@ -24,44 +25,41 @@
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="../../index.html">About</a></li>
                     <li><a href="#Services">Services</a></li>
                     <li><a href="../Schedule/schedule.html">Schedule</a></li>
-                    <li><a href="../signin/SingIn.html">Sign In</a></li>
+                    <li><a href="../Sign Out/signout.html">Sign Out</a></li>
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-  <div class="schedule-container">
-    <div class="schedule-container-2">
-    <h2>Schedule an Appointment or Surgery</h2>
-
-    <form id="appointment-form">
-      <label for="appointment-type">Select Type:</label>
-      <select id="appointment-type" name="appointment-type" required>
-        <option value="appointment">Regular Appointment</option>
-        <option value="surgery">Surgery</option>
-      </select>
-
-      <label for="appointment-date">Choose Date:</label>
-      <input type="date" id="appointment-date" name="appointment-date" required>
-
-      <label for="appointment-time">Choose Time:</label>
-      <input type="time" id="appointment-time" name="appointment-time" required>
-
-      <button type="submit">Book Now</button>
-      <div id="booking-message"></div>
-    </form>
-    </div>
-  </div>
-    </main>
-    <footer>
-        <div class="footer-container">
-            <p>Copyright &copy; Ebrahim Mohamed, Mohamed Jameel</p>
+        <div class="table">
+            <table >
+                <thead>
+                    <tr>
+                        <th>Patient</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody class="patients">
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Regular</td>
+                        <td>2023-10-01</td>
+                        <td>10:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>Surgery</td>
+                        <td>2023-10-02</td>
+                        <td>11:00 AM</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
         </div>
-    </footer>
+    </main>
 </body>
-
-</html>
