@@ -7,3 +7,22 @@ window.addEventListener('scroll', () => {
         headerName.classList.remove('name-scroll');
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+ const signInButton = document.querySelector(".submit button");
+
+    signInButton.addEventListener("click", () => {
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+        
+        if (username === "doctor" && password === "2028") {
+            username = document.getElementById("successful");
+            username.classList.add("successful-msg");
+            alert("Sign in successful!");
+            // You can redirect the user if needed:
+            // window.location.href = "dashboard.html";
+        } else {
+            alert("Invalid username or password.");
+        }
+    });
+});
