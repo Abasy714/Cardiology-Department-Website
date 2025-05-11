@@ -17,49 +17,63 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <div class="name">
-                <img src="../../Assets/logo.png" alt="Logo" class="logo">
-                <h1>Cardiology</h1>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <div class="name">
+                    <img src="../../Assets/logo.png" alt="Logo" class="logo">
+                    <h1>Cardiology</h1>
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#Services">Services</a></li>
+                        <li><a href="../Schedule/schedule.html">Schedule</a></li>
+                        <li><a href="../Sign Out/signout.html">Sign Out</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="../Schedule/schedule.html">Schedule</a></li>
-                    <li><a href="../Sign Out/signout.html">Sign Out</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-            </nav>
+        </header>
+        <main>
+            <div class="background1"></div>
+            <div class="table">
+                <table >
+                    <thead>
+                        <tr>
+                            <th>Patient</th>
+                            <th>Type</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Checkmark</th>
+                        </tr>
+                    </thead>
+                    <tbody class="patients">
+                        <tr>
+                            <td>John Doe</td>
+                            <td>Regular</td>
+                            <td>2023-10-01</td>
+                            <td>10:00 AM</td>
+                            <td ><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>Surgery</td>
+                            <td>2023-10-02</td>
+                            <td>11:00 AM</td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <p>Copyright &copy; Ebrahim Mohamed, Mohamed Jameel</p>
         </div>
-    </header>
-    <main>
-        <div class="table">
-            <table >
-                <thead>
-                    <tr>
-                        <th>Patient</th>
-                        <th>Type</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                    </tr>
-                </thead>
-                <tbody class="patients">
-                    <tr>
-                        <td>John Doe</td>
-                        <td>Regular</td>
-                        <td>2023-10-01</td>
-                        <td>10:00 AM</td>
-                    </tr>
-                    <tr>
-                        <td>Jane Smith</td>
-                        <td>Surgery</td>
-                        <td>2023-10-02</td>
-                        <td>11:00 AM</td>
-                    </tr>
-                    <!-- Add more rows as needed -->
-                </tbody>
-            </table>
-        </div>
-    </main>
+    </footer>
+    
 </body>
+
+</html>
