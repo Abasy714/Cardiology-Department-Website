@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 msg.textContent = "✅ Account created successfully!";
                 msg.style.color = "green";
                 setTimeout(() => {
-                    window.location.href = "../html/Schedule/schedule.html";
+                    window.location.href = "../Schedule/schedule.html";
                 }, 1000);
             }
         });
