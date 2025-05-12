@@ -1,0 +1,44 @@
+.devices-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Nunito', sans-serif;
+}
+
+.devices-container h2 {
+  text-align: center;
+  color: #5d1212;
+  margin-bottom: 30px;
+}
+
+.devices-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.devices-table th,
+.devices-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.devices-table th {
+  background-color: #5d1212;
+  color: white;
+}
+
+.device-img {
+  width: 70px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.device-count {
+  font-weight: bold;
+  color: #333;
+  font-size: 15px;
+}

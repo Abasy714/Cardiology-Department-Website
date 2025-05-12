@@ -147,5 +147,42 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         });
     });
+
+    // Count patients
+    const appointmentData = JSON.parse(localStorage.getItem("appointments")) || [];
+
+    const deviceCounts = {
+    "Echocardiography": 0,
+    "Electrocardiogram": 0,
+    "Holter Monitoring": 0,
+    "Stress Testing": 0,
+    "Cardiac Catheterization": 0,
+    "Pacemaker": 0,
+    "Blood Pressure Monitoring": 0,
+    "Consultation": 0,
+    "Cardiac Surgery": 0,
+    };
+
+    appointmentData.forEach(app => {
+    const type = app.type.toLowerCase();
+
+    if (type.includes("echo")) deviceCounts["Echocardiography"]++;
+    if (type.includes("ecg")) deviceCounts["Electrocardiogram"]++;
+    if (type.includes("holter")) deviceCounts["Holter Monitoring"]++;
+    if (type.includes("stress")) deviceCounts["Stress Testing"]++;
+    if (type.includes("catheter")) deviceCounts["Cardiac Catheterization"]++;
+    if (type.includes("pacemaker")) deviceCounts["Pacemaker"]++;
+    if (type.includes("blood")) deviceCounts["Blood Pressure Monitoring"]++;
+    if (type.includes("consult")) deviceCounts["Consultation"]++;
+    if (type.includes("surgery")) deviceCounts["Cardiac Surgery"]++;
+    });
+
+    // Update HTML counters
+    for (const [service, count] of Object.entries(deviceCounts)) {
+    const id = service.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '') + "-counter";
+    const el = document.getElementById(id);
+    if (el) el.textContent = `${count} patient${count !== 1 ? "s" : ""}`;
+    }
+
 });
 
