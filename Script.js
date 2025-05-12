@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Redirect after 2 seconds
             setTimeout(() => {
-                window.location.href = "../signin/SingIn.html";
+                window.location.href = "../../index.html";
             }, 1000);
         });
     }
@@ -192,6 +192,65 @@ document.addEventListener("DOMContentLoaded", () => {
     const el = document.getElementById(id);
     if (el) el.textContent = `${count} patient${count !== 1 ? "s" : ""}`;
     }
-    
+
+    // Add new patient account
+    let patientAccounts = JSON.parse(localStorage.getItem("patientAccounts")) || [];
+
+    const signUpButton = document.querySelector("button[type='patient-submit']");
+    const signUpPage = document.title.includes("Sign Up");
+
+    if (signUpButton && signUpPage) {
+        signUpButton.addEventListener("click", () => {
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const msg = document.querySelector(".patient-msg");
+
+            if (!username || !password) {
+                msg.textContent = "❌ Username and password are required.";
+                msg.style.color = "red";
+                return;
+            }
+
+            const exists = patientAccounts.some(acc => acc.username === username);
+
+            if (exists) {
+                msg.textContent = "❌ Username already exists.";
+                msg.style.color = "red";
+            } else {
+                patientAccounts.push({ username, password });
+                localStorage.setItem("patientAccounts", JSON.stringify(patientAccounts));
+                msg.textContent = "✅ Account created successfully!";
+                msg.style.color = "green";
+                setTimeout(() => {
+                    window.location.href = "../html/Schedule/schedule.html";
+                }, 1000);
+            }
+        });
+    }
+
+    const psignInButton = document.querySelector("button[type='patient-submit']");
+    const signInPage = document.title.includes("Sign In");
+
+    if (psignInButton && signInPage) {
+        psignInButton.addEventListener("click", () => {
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const msg = document.querySelector(".patient-msg");
+
+            // Patient login
+            const user = patientAccounts.find(acc => acc.username === username && acc.password === password);
+
+            if (user) {
+                msg.textContent = "✅ Login successful!";
+                msg.style.color = "green";
+                setTimeout(() => {
+                    window.location.href = "../Schedule/schedule.html";
+                }, 1000);
+            } else {
+                msg.textContent = "❌ Invalid username or password.";
+                msg.style.color = "red";
+            }
+        });
+    }
 });
 

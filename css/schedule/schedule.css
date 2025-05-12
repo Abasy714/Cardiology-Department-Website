@@ -67,6 +67,14 @@ button:hover {
   font-weight: bold;
 }
 
+.navbar {
+  width: 100%;
+}
+
+.navbar ul button{
+  margin-left: 620px;
+}
+
 @media screen and (max-width: 768px) {
   .schedule-container-2 {
     width: 90%;

@@ -1,0 +1,109 @@
+.patient-signin-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    padding: 0px;
+    margin: 0px;
+    background-image: url('../../Assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.patient-forDrMsg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
+    color: #323547;
+    font-size: 17px;
+}
+
+.patient-border {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    background-color: rgb(255, 255, 255,0.7);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.patient-username, .patient-password {
+    display: flex;
+    align-items: center;
+    margin: 0 45px 0 0;
+    padding: 0;
+}
+
+.patient-msg {
+    margin: 10px 0 0 0;
+}
+.patient-username h3, .patient-password h3 {
+    margin: 0;
+    color: #5d1212;
+}
+.patient-username input, .patient-password input {
+    width: 100%;
+    margin: 0 0 0 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.patient-submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.patient-submit button {
+
+    margin: 20px;
+    padding: 10px;
+    background-color: #5d1212;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.patient-submit a {
+    margin: 0;
+    color: #5d1212;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    text-decoration: none;
+}
+.patient-submit a:hover {
+    color: #881818;
+    text-decoration: underline;
+}
+
+.patient-submit button:hover {
+    background-color: #881818;
+}
+
+@media screen and (max-width: 768px) {
+    .signin-container {
+        flex-direction: column;
+  
+    }
+    
+    .border {
+        width: 90%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .username, .password {
+        margin: 0 30px 0 0;
+    }
+    .username input, .password input {
+        width: 100%;
+        margin: 0 0 0 20px;
+    }
+    
+}
