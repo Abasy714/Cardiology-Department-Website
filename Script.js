@@ -41,9 +41,20 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
 
             const name = document.getElementById("appointment-name").value.trim();
-            const type = document.getElementById("appointment-type").value;
             const date = document.getElementById("appointment-date").value;
             const time = document.getElementById("appointment-time").value;
+            const type = document.getElementById("appointment-type").value;
+            const allowedTypes = [
+                "Echocardiography",
+                "Electrocardiogram",
+                "Holter Monitoring",
+                "Stress Testing",
+                "Cardiac Catheterization & Angiography",
+                "Pacemaker Implantation & Monitoring",
+                "Blood Pressure Monitoring",
+                "Consultation with Cardiologists",
+                "Cardiac Surgery"
+            ];
 
             if (date && time) {
                 message.textContent = `✅ Your ${type} has been booked on ${date} at ${time}.`;
@@ -102,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         row.innerHTML = `
         <td>${app.patient}</td>
-        <td>${app.type === "appointment" ? "Regular" : "Surgery"}</td>
+        <td>${app.type}</td>
         <td>${app.date}</td>
         <td>${app.time}</td>
         <td><input type="checkbox" ${app.checked ? "checked" : ""} data-index="${index}"></td>

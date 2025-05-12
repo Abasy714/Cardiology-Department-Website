@@ -42,3 +42,36 @@
   color: #333;
   font-size: 15px;
 }
+
+
+@media (max-width: 768px) {
+  .devices-container {
+    width: 100%;
+    height: 80vh;
+    margin: 30px 0;
+    padding: 0px;
+  }
+
+  .devices-table {
+    width: 100%;
+    font-size: 12px;
+  }
+  .devices-container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .devices-table th,
+  .devices-table td {
+    padding: 10px 0;
+    font-size: 10px;
+  }
+
+  .device-img {
+    width: 50px;
+  }
+
+  .device-count {
+    font-size: 10px;
+  }
+}
