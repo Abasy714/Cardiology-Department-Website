@@ -32,38 +32,80 @@
         </div>
     </header>
     <main>
-        <div class="schedule-container">
-            <div class="schedule-container-2">
-                <h2>Schedule an Appointment or Surgery</h2>
+    <div class="schedule-container">
+        <div class="schedule-container-2">
+            <h2>Schedule an Appointment or Surgery</h2>
 
-                <form id="appointment-form">
-                    <label for="appointment-name">Your Name:</label>
-                    <input type="text" id="appointment-name" name="appointment-name" required>
-                    <label for="appointment-type">Select Type:</label>
-                    <select id="appointment-type" name="appointment-type" required>
-                        <option value="Echocardiography">Echocardiography</option>
-                        <option value="Electrocardiogram">Electrocardiogram</option>
-                        <option value="Holter Monitoring">Holter Monitoring</option>
-                        <option value="Stress Testing">Stress Testing</option>
-                        <option value="Cardiac Catheterization & Angiography">Cardiac Catheterization & Angiography</option>
-                        <option value="Pacemaker Implantation & Monitoring">Pacemaker Implantation & Monitoring</option>
-                        <option value="Blood Pressure Monitoring">Blood Pressure Monitoring</option>
-                        <option value="Consultation with Cardiologists">Consultation with Cardiologists</option>
-                        <option value="Cardiac Surgery">Cardiac Surgery</option>
-                    </select>
+            <form id="appointment-form">
 
-                    <label for="appointment-date">Choose Date:</label>
-                    <input type="date" id="appointment-date" name="appointment-date" required>
+                <label for="appointment-name">Your Name:</label>
+                <input type="text" id="appointment-name" name="appointment-name" required>
 
-                    <label for="appointment-time">Choose Time:</label>
-                    <input type="time" id="appointment-time" name="appointment-time" required>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
 
-                    <button type="submit">Book Now</button>
-                    <div id="booking-message"></div>
-                </form>
-            </div>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="national-id">National ID:</label>
+                <input type="text" id="national-id" name="national-id" placeholder="Enter your national ID..." required>
+
+                <label for="birthplace">Place of Birth:</label>
+                <input type="text" id="birthplace" name="birthplace" placeholder="Enter your place of birth..." required>
+
+                <label for="appointment-type">Select Type:</label>
+                <select id="appointment-type" name="appointment-type" required>
+                    <option value="Echocardiography">Echocardiography</option>
+                    <option value="Electrocardiogram">Electrocardiogram</option>
+                    <option value="Holter Monitoring">Holter Monitoring</option>
+                    <option value="Stress Testing">Stress Testing</option>
+                    <option value="Cardiac Catheterization & Angiography">Cardiac Catheterization & Angiography</option>
+                    <option value="Pacemaker Implantation & Monitoring">Pacemaker Implantation & Monitoring</option>
+                    <option value="Blood Pressure Monitoring">Blood Pressure Monitoring</option>
+                    <option value="Consultation with Cardiologists">Consultation with Cardiologists</option>
+                    <option value="Cardiac Surgery">Cardiac Surgery</option>
+                </select>
+
+                <label for="appointment-date">Choose Date:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+
+                <label for="appointment-time">Choose Time:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+
+                <h3>Medical History</h3>
+
+                <label>Chronic Conditions (check all that apply):</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="chronic" value="Diabetes"> Diabetes</label>
+                    <label><input type="checkbox" name="chronic" value="Hypertension"> Hypertension</label>
+                    <label><input type="checkbox" name="chronic" value="Heart Disease"> Heart Disease</label>
+                    <label><input type="checkbox" name="chronic" value="Asthma"> Asthma</label>
+                    <label><input type="checkbox" name="chronic" value="None"> None</label>
+                </div>
+
+                <label for="medications">Current Medications:</label>
+                <textarea id="medications" name="medications" placeholder="List any current medications..."></textarea>
+
+                <label for="allergies">Allergies:</label>
+                <textarea id="allergies" name="allergies" placeholder="List any allergies (drugs, food)..."></textarea>
+
+                <label for="surgeries">Past Surgeries or Hospitalizations:</label>
+                <textarea id="surgeries" name="surgeries" placeholder="Include type, reason, and year if known..."></textarea>
+
+                <label for="family">Family Medical History:</label>
+                <textarea id="family" name="family" placeholder="Any family history of heart disease, diabetes, etc..."></textarea>
+
+                <button type="submit">Book Now</button>
+                <div id="booking-message"></div>
+            </form>
         </div>
-    </main>
+    </div>
+</main>
+
     <footer>
         <div class="footer-container">
             <p>Copyright &copy; Ebrahim Mohamed, Mohamed Jameel</p>

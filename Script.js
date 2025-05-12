@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (user) {
             msg.textContent = "✅ Login successful!";
             msg.style.color = "green";
-            localStorage.setItem("loggedInPatient", username); 
+            localStorage.setItem("loggedInPatient", username); // ✅ Save login session
             setTimeout(() => {
                 window.location.href = "../Schedule/schedule.html";
             }, 1000);
@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Delete Patient
+    // Delete Account Logic
     const pdeleteButton = document.querySelector("button#delete-account-button");
     const schedulepage = document.title.includes("Schedule");
 

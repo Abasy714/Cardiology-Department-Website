@@ -1,92 +1,118 @@
-.schedule-container-2 {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #ffffffcc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  font-family: 'Nunito', sans-serif;
-}
-
 .schedule-container {
-    display:flex;
-    align-items: center;
+    display: flex;
     justify-content: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 50px 20px;
     background-color: #f1f1f1;
-    padding: 0px;
-    margin: 0px;
     background-image: url('../../Assets/background.jpg');
     background-size: cover;
     background-position: center;
+    box-sizing: border-box;
+}
+
+.schedule-container-2 {
+    width: 100%;
+    max-width: 550px;
+    background-color: #ffffffcc;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Nunito', sans-serif;
 }
 
 .schedule-container-2 h2 {
-  text-align: center;
-  color: #5d1212;
+    text-align: center;
+    color: #5d1212;
+    margin-bottom: 20px;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-  margin-top: 15px;
-  font-weight: bold;
-  color: #333;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
 }
 
-input, select {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-family: inherit;
+input, select, textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
 }
 
-button {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #5d1212;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s ease;
+textarea {
+    resize: vertical;
+    min-height: 80px;
 }
 
-button:hover {
-  background-color: #881818;
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #5d1212;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #881818;
 }
 
 #booking-message {
-  margin-top: 15px;
-  text-align: center;
-  font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
 }
 
-.navbar {
-  width: 100%;
+#delete-account-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: #5d1212;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
 }
 
-.navbar ul button{
-  margin-left: 700px;
+#delete-account-button:hover {
+    background-color: #881818;
+}
+
+header {
+    position: relative;
 }
 
 @media screen and (max-width: 768px) {
-  .schedule-container-2 {
-    width: 90%;
-    padding: 15px;
-  }
-  
-  
-  .navbar ul button {
-    margin-left: 60px;
-  }
+    .schedule-container-2 {
+        padding: 20px;
+        width: 100%;
+        max-width: 90%;
+    }
 
-  .navbar ul {
-    margin-left: 20px;
-  }
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
