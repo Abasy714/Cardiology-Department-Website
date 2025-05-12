@@ -72,16 +72,16 @@ button:hover {
 }
 
 .navbar ul button{
-  margin-left: 620px;
+  margin-left: 700px;
 }
 
 @media screen and (max-width: 768px) {
   .schedule-container-2 {
-    width: 80%;
+    width: 90%;
     padding: 15px;
   }
   
   .navbar ul button {
-    margin-left: 40px;
+    margin-left: 100px;
   }
 }
