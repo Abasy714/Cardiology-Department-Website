@@ -241,16 +241,51 @@ document.addEventListener("DOMContentLoaded", () => {
             const user = patientAccounts.find(acc => acc.username === username && acc.password === password);
 
             if (user) {
-                msg.textContent = "✅ Login successful!";
-                msg.style.color = "green";
-                setTimeout(() => {
-                    window.location.href = "../Schedule/schedule.html";
-                }, 1000);
+            msg.textContent = "✅ Login successful!";
+            msg.style.color = "green";
+            localStorage.setItem("loggedInPatient", username); 
+            setTimeout(() => {
+                window.location.href = "../Schedule/schedule.html";
+            }, 1000);
             } else {
                 msg.textContent = "❌ Invalid username or password.";
                 msg.style.color = "red";
             }
         });
     }
+
+    // Delete Patient
+    const pdeleteButton = document.querySelector("button#delete-account-button");
+    const schedulepage = document.title.includes("Schedule");
+
+    if (pdeleteButton && schedulepage) {
+        pdeleteButton.addEventListener("click", () => {
+            const username = localStorage.getItem("loggedInPatient");
+            if (!username) {
+                alert("No user is currently logged in.");
+                return;
+            }
+
+            let patientAccounts = JSON.parse(localStorage.getItem("patientAccounts")) || [];
+
+            patientAccounts = patientAccounts.filter(acc => acc.username !== username);
+
+            localStorage.setItem("patientAccounts", JSON.stringify(patientAccounts));
+
+            let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+            appointments = appointments.filter(app => app.patient !== username);
+            localStorage.setItem("appointments", JSON.stringify(appointments));
+
+            localStorage.removeItem("loggedInPatient");
+
+            alert(" Your account and appointments have been deleted.");
+
+            setTimeout(() => {
+                window.location.href = "../../index.html";
+            }, 1000);
+        });
+    }
+
+
 });
 
