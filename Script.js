@@ -9,7 +9,7 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 🔐 Sign In Logic
+    // Sign In Logic
     const signInButton = document.querySelector(".submit button");
 
     if (signInButton) {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 📅 Appointment Booking Logic
+    // Appointment Booking Logic
     const form = document.getElementById("appointment-form");
     const message = document.getElementById("booking-message");
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 🚪 Sign Out Logic
+    // Sign Out Logic
     const signOutButton = document.getElementById("signout-button");
     const signOutMessage = document.getElementById("signout-message");
 
@@ -85,16 +85,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
-    ///////////////////////////////////////////
-    // 🗓️ Appointments Table Logic
+    // Appointments Table Logic
 
     const patientsTable = document.querySelector(".patients");
 
     if (patientsTable) {
     const appointments = JSON.parse(localStorage.getItem("appointments")) || [];
 
-    // ✅ Sort by date and time
+    // Sort by date and time
     appointments.sort((a, b) => new Date(`${a.date}T${a.time}`) - new Date(`${b.date}T${b.time}`));
 
     appointments.forEach((app, index) => {
@@ -183,6 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const el = document.getElementById(id);
     if (el) el.textContent = `${count} patient${count !== 1 ? "s" : ""}`;
     }
-
+    
 });
 
