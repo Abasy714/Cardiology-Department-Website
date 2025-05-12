@@ -81,7 +81,12 @@ button:hover {
     padding: 15px;
   }
   
+  
   .navbar ul button {
-    margin-left: 100px;
+    margin-left: 60px;
+  }
+
+  .navbar ul {
+    margin-left: 20px;
   }
 }
