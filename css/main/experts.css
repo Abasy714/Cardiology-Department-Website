@@ -1,6 +1,7 @@
 .experts-r1, .experts-r2 {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 50px 0 50px 0;
     padding: 0;
     gap: 150px;  
@@ -20,7 +21,7 @@
     left: 719px;
 }
 .expert1 h2, .expert2 h2 {
-    width: 209.359px;
+    width: 250px;
     margin:0;
 }
 
@@ -36,7 +37,7 @@
 
 .expert-Content p {
     font-family: 'Mulish', sans-serif;
-    width: 210px;
+    width: 300px;
     font-size: 16px;
     margin-left: 5px;
     color: rgb(130, 134, 144);
@@ -67,7 +68,7 @@
         top: 597px;
     }
     .expert-Content p{
-        width: 100%;
+        width: 90%;
         margin: 7px 0 35px 5px;
         font-size: 16px;
     }
