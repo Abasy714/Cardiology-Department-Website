@@ -83,9 +83,7 @@ button[type="submit"]:hover {
 }
 
 #delete-account-button {
-    position: absolute;
-    top: 20px;
-    right: 30px;
+    margin-left: 700px;
     background-color: #5d1212;
     color: white;
     padding: 8px 16px;
@@ -114,5 +112,9 @@ header {
     .navbar ul {
         flex-direction: column;
         gap: 10px;
+    }
+
+    #delete-account-button {
+        margin-left: 40px;
     }
 }
