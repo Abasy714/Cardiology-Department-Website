@@ -70,13 +70,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
                 appointments.push(appointment);
                 localStorage.setItem("appointments", JSON.stringify(appointments));
-
             } else {
                 message.textContent = "❌ Please fill in all fields.";
                 message.style.color = "red";
             }
+            form.reset();
         });
     }
+    
 
     // Sign Out Logic
     const signOutButton = document.getElementById("signout-button");
@@ -218,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 msg.style.color = "red";
             } else {
                 patientAccounts.push({ username, password });
-                localStorage.setItem("patientAccounts", JSON.stringify(patientAccounts));
+                localStorage.setItem("loggedInPatient", username);
                 msg.textContent = "✅ Account created successfully!";
                 msg.style.color = "green";
                 setTimeout(() => {
